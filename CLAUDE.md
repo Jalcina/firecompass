@@ -136,6 +136,16 @@ ANTHROPIC_API_KEY=     # console.anthropic.com
 BRAVE_SEARCH_API_KEY=  # brave.com/search/api (2000 gratis/mes)
 ```
 
+## ECC — Comandos disponibles
+Ver ECC-COMMANDS.md para la referencia completa. Los más importantes:
+- `/plan` — antes de cada feature
+- `/react-build` — cuando falla el build de Next.js
+- `/react-review` — después de escribir componentes
+- `/code-review` — revisión general
+- `/save-session` / `/resume-session` — guardar y recuperar contexto cada 45 min
+- `/security-scan` — antes de hacer deploy
+- `/orch-add-feature` — feature completa end-to-end con TDD
+
 ## Comandos útiles
 ```bash
 npm run dev          # desarrollo local → http://localhost:3000
