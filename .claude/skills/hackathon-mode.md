@@ -10,7 +10,7 @@ description: Activate during hackathon to get maximum speed, minimal explanation
 - Ship > perfecto. MVP funcional > solución elegante.
 - Si algo puede hacerse en 30 min, hazlo. No planifiques 2 horas.
 - Prioridad: que funcione en Vercel con URL pública.
-- Si hay 2 formas de hacer algo, elige la más rápida.
+- Si hay 2 formas de hacer algo, elige la más simple y directa (no la más corta de escribir, la más fácil de entender y depurar).
 - No refactorices a no ser que esté roto.
 - Tests solo para lo crítico (API de Claude, fetch de PSI).
 
