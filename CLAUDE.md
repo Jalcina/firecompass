@@ -278,6 +278,13 @@ Requiere `ANTHROPIC_API_KEY` en `.env.local`:
 5. `app/ask/page.tsx` — Chat: el usuario pregunta, Claude responde citando PSI IDs en tiempo real
 6. *(opcional)* Análisis de frames de vídeo con Claude Vision
 
+### Fase 3 — Bonus visual (solo si sobra tiempo)
+Solo intentar si Fase 1 + Fase 2 están completas y desplegadas antes de las 15:00 del domingo:
+7. Llama 3D animada en el comparador de entornos — mostrar visualmente la diferencia entre llama terrestre (teardrop, naranja) y llama en microgravedad (esférica, azul)
+   - Librería: React Three Fiber (`@react-three/fiber` + `@react-three/drei`)
+   - Colocarla dentro de `app/simulator/page.tsx` como componente visual
+   - Si no funciona bien en 1 hora → revertir, no vale la pena
+
 ### Regla
 Construye la Fase 1 completa y despliega en Vercel antes de tocar la Fase 2.
 Una app funcional sin chat vale más que una app rota con chat.
