@@ -2,9 +2,46 @@
 
 ## Proyecto
 Dashboard web con IA para seguridad contra incendios en exploración espacial.
-**Reto:** Flame in Freefall — PSI de NASA + Claude API.
+**Reto:** Flame in Freefall — "SI-Powered Fire Safety Insights from Microgravity Combustion Data"
+**Objetivo oficial del reto:** Construir un dashboard que resuma, clasifique y explique décadas de resultados de combustión en microgravedad de NASA para informar la seguridad contra incendios en misiones a la Luna y Marte.
 **Hackathon:** Sevilla, Agencia Espacial Española, 14-15 Noviembre 2026.
 **Equipo:** 2 personas. Premio objetivo: Best Use of Data + Most Inspirational.
+
+## Audiencia objetivo (según el reto oficial)
+Profesores, estudiantes de posgrado, investigadores y ingenieros aeroespaciales.
+La app debe hacer accesibles datos complejos a todos estos perfiles — no solo a expertos.
+
+## Tres dominios de seguridad contra incendios en el espacio
+El reto organiza las investigaciones en estas 3 áreas — úsalas para estructurar la UI:
+- **Prevención** — selección de materiales, control de fuentes de ignición (BASS, BASS-II, FLEX, ACME)
+- **Detección** — medición de humo y aerosoles (SAME, SAME-R, DAFT, DAFT-2)
+- **Supresión** — técnicas de dilución con CO2 y helio (FLEX, Cool Flames)
+
+## Incidentes históricos reales (usar en la demo — criterio Impact)
+Estos incidentes son reales y los jueces los reconocerán. Úsalos para contextualizar por qué esto importa:
+- **Apollo 1 (1967)** — incendio en tierra mató a 3 astronautas en cabina con 100% O2
+- **Apollo 13 (1970)** — explosión del tanque de oxígeno en tránsito lunar
+- **Mir (1997)** — incendio por generador de oxígeno a bordo de la estación
+- **Artemis II (reciente)** — alarma de humo a ~80.000 millas de la Tierra
+
+## Aplicaciones derivadas en la Tierra (criterio Impact + Storytelling)
+La investigación de combustión espacial ya ha generado beneficios terrestres:
+- Tanques de aire para bomberos (spinoff directo de trajes espaciales)
+- Detectores de humo modernos (tecnología derivada de SAME)
+- Ropa ignífuga de protección
+
+## Objetivos específicos del dashboard (según el reto oficial)
+1. Identificar investigaciones relevantes para naves, estaciones, bases lunares, superficies marcianas y rovers presurizados
+2. Extraer datos de modelado predictivo para predicciones de inflamabilidad y escenarios de incendio
+3. Destacar investigación que informe el desarrollo de equipos de seguridad de nueva generación
+
+## Atributos a resumir por investigación (según el reto oficial)
+Para cada investigación mostrar: objetivos experimentales, tipos de combustible (formas, tamaños, especificaciones), condiciones de prueba (concentración O2, velocidad de flujo de aire), diferencias entre variables dentro de la investigación, tipos de sensores y metodologías de medición.
+
+## Misiones futuras relevantes
+- **LUCI** (Lunar-g Combustion Investigation) — medirá combustión en gravedad parcial lunar por primera vez
+- **FM2** (Flammability of Materials on the Moon) — inflamabilidad de materiales en la Luna
+Mención clave: hoy NO existen datos experimentales de gravedad parcial — LUCI y FM2 son el futuro que FireCompass está preparando.
 
 ## Frase del jurado (1 línea)
 "FireCompass transforma 30 años de experimentos de combustión de la NASA en respuestas claras sobre qué arderá primero en una base lunar."
