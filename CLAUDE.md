@@ -4,7 +4,7 @@
 Dashboard web con IA para seguridad contra incendios en exploración espacial.
 **Reto:** Flame in Freefall — "SI-Powered Fire Safety Insights from Microgravity Combustion Data"
 **Objetivo oficial del reto:** Construir un dashboard que resuma, clasifique y explique décadas de resultados de combustión en microgravedad de NASA para informar la seguridad contra incendios en misiones a la Luna y Marte.
-**Hackathon:** Sevilla, Agencia Espacial Española, 14-15 Noviembre 2026.
+**Hackathon:** Sevilla, Agencia Espacial Española, 14-15 Noviembre 2026. Tema: "The Next Frontier".
 **Equipo:** 2 personas. Premio objetivo: Best Use of Data + Most Inspirational.
 
 ## Audiencia objetivo (según el reto oficial)
@@ -155,12 +155,101 @@ npx ts-node scripts/fetch-psi.ts   # descargar datos PSI
 npx ts-node scripts/analyze-frames.ts  # analizar frames con Claude Vision
 ```
 
-## Criterios del jurado (5 pesos iguales)
-- Impact: puede salvar vidas reales en misiones Luna/Marte
-- Creativity: Claude Vision sobre vídeos NASA + diseño profesional
-- Validity: datos citados con PSI ID + DOI + número de filas
-- Relevance: usa exactamente los datasets del challenge
-- Presentation: URL Vercel funcional + demo video 2 min
+## Criterios del jurado — RÚBRICA OFICIAL (escala 1-5, pesos iguales)
+
+### Impact (puntuación 5 — Outstanding Impact)
+"Demuestra impacto excepcional, aborda un problema significativo con soluciones propuestas. Su alcance es extenso, inspira, beneficia a una audiencia amplia, o podría cambiar el mundo."
+→ FireCompass: vidas reales en Luna/Marte, spinoffs terrestres (bomberos, detectores de humo), 30 años de datos NASA accesibles por primera vez
+
+### Creativity (puntuación 5 — Highly Creative and Innovative)
+"Presenta un enfoque revolucionario que nunca ha sido intentado antes. Desafía métodos convencionales, presenta una solución original e inventiva que destaca en su campo."
+→ FireCompass: Claude Vision sobre vídeos reales de llamas en ISS + dashboard interactivo único — no existe nada igual en acceso público a datos PSI
+
+### Validity (puntuación 5 — Highly Valid and Feasible)
+"Científicamente sólido y técnicamente factible. Totalmente desarrollado y listo para implementación en el mundo real, altamente usable y accesible."
+→ FireCompass: datos reales de NASA con PSI ID + DOI + número de filas, marcar siempre "medido" vs "predicho"
+
+### Relevance (puntuación 5 — Highly Relevant and Strong NASA Data Integration)
+"Comprometido profundamente con el challenge. Los datos NASA son INTEGRALES al éxito del proyecto — no una adición superficial."
+→ FireCompass: PSI API como backend real, DOIs citados en cada dato, investigations.json como core del dashboard
+
+### Presentation (puntuación 5 — Exceptional Communication and Storytelling)
+"Presentación bien estructurada y convincente, articula claramente el challenge, la solución propuesta y la importancia del proyecto. Storytelling atractivo."
+→ FireCompass: URL Vercel pública + demo video 30s con estructura oficial (ver abajo)
+
+## Demo — Requisitos oficiales OBLIGATORIOS
+- **Formato:** Video de 30 segundos O slide deck de máximo 7 slides (incluye portada e intro)
+- **Idioma:** Inglés obligatorio. Excepción: vídeo puede ser en otro idioma CON subtítulos en inglés
+- **Hosting:** Subir a YouTube/Drive/GitHub — URL pública sin login ni contraseña
+- **Si excedes estos límites → NO elegible para Global Judging**
+
+### Estructura del vídeo de 30 segundos (seguir este guión)
+- [0:00] Preséntate: nombre y equipo
+- [0:02] Lead us in: ¿qué challenge aborda? ¿qué os inspiró?
+- [0:05] Nombre del proyecto y tagline
+- [0:10] Describe la idea: cómo funciona, qué hace, cómo los datos NASA lo hacen posible
+- [0:20-0:30] Look into the future: ¿qué impacto tendrá? ¿cómo cambia el mundo?
+
+### Si haces slide deck (7 slides)
+Incluir obligatoriamente: nombre del equipo, nombres de miembros, challenge seleccionado.
+Usar imágenes fuertes del dashboard. Mostrar cómo los datos NASA hacen posible la solución.
+
+## Formulario de proyecto — Campos que rellenarás en spaceappschallenge.org
+El jurado evalúa este formulario. Preparar respuestas de antemano:
+1. **Project Name:** FireCompass
+2. **High-Level Summary:** ¿Qué desarrollaste? ¿Cómo aborda el challenge? ¿Por qué importa?
+3. **Link to Project Demo:** URL pública (YouTube o Google Drive) del vídeo de 30s
+4. **Link to Final Project:** URL de Vercel (pública, sin login)
+5. **Detailed Description:** qué hace, cómo funciona, beneficios, herramientas usadas (Next.js, Claude API, PSI API)
+6. **Use of SI (Super Intelligence):** Declarar uso de Claude — es obligatorio. Citar que el código fue generado/asistido con Claude Code + Claude API como feature del producto
+7. **NASA Data:** PSI API (psi.nasa.gov/geode-py/ws), NTRS API, datasets PSI-25, PSI-69, PSI-39, PSI-98, PSI-101, PSI-159 con sus DOIs
+8. **References:** Listar todos los recursos externos usados
+
+**IMPORTANTE:** Puedes guardar y volver a enviar tantas veces como quieras hasta las 23:59 del 15 Nov. Solo se revisa la última versión enviada.
+
+## 10 Premios Globales — Objetivos de FireCompass
+- **Best Use of Data** ← OBJETIVO PRINCIPAL: "El proyecto que mejor hace accesibles los datos espaciales o los aprovecha de forma única"
+- **Most Inspirational** ← OBJETIVO SECUNDARIO: "El proyecto que captura nuestros corazones"
+- Best Use of Science: mejor uso del método científico
+- Best Use of Technology: uso más innovador de tecnología
+- Galactic Impact: mayor potencial para mejorar la vida en la Tierra o el universo
+- Best Mission Concept: concepto y diseño más plausible
+- Best Storytelling Award: comunica mejor el potencial de open data
+- Global Connection Award: conecta mejor a personas a través de tecnología
+- Art & Technology Award: combina más efectivamente habilidades técnicas y creativas
+- Local Impact Award: mayor potencial en la comunidad local
+
+**Para Best Use of Data:** mostrar en la UI qué fuentes PSI se usan y cuántas filas de datos.
+**Para Most Inspirational:** conectar los datos con historias humanas reales (Apollo 1, bomberos, Artemis II).
+
+## Timeline del jurado (post-hackathon)
+- **15 Nov 2026 23:59** — Cierre de entregas (hora local Sevilla)
+- **3 Dic 2026** — Anuncio de Global Nominees
+- **17 Dic 2026** — Anuncio de Global Finalists + Honorable Mentions
+- **26 Ene 2027** — Anuncio de Global Winners
+
+## SI (Super Intelligence) — Reglas de divulgación
+El uso de Claude está permitido y es obligatorio declararlo:
+- En la descripción del proyecto: indicar que el código fue asistido con Claude Code
+- En la feature "Ask the Data": indicar que usa Claude API
+- NO usar imágenes generadas por IA sin watermark visible
+- El campo "Use of SI" en el formulario NO lo ven los jueces directamente — es para datos internos de NASA
+- Los jueces SÍ verán indicadores de SI dentro del proyecto en sí
+
+## Logística del hackathon — Reglas críticas
+
+**Tema 2026:** "The Next Frontier" — de tu patio trasero a los confines del universo.
+
+**Project Tab abre el 14 Nov a las 9:00 a.m. (hora local).** Antes de esa hora no puedes editar la página del proyecto. Es la página que ven los jueces — rellenarla bien es tan importante como la app.
+
+**Elegibilidad para premios:** Todos los miembros del equipo deben ser participantes confirmados del mismo Local Event (Sevilla). Si alguien está en lista de espera, contactar al Local Lead antes del hackathon.
+
+**Space Apps Connect** = GitHub Discussions en `github.com/nasa/spaceapps`
+- Para preguntas sobre el reto: categoría "Challenges" + filtrar por label "Flame in Freefall"
+- Para buscar compañeros: categoría "Find A Team"
+- Para herramientas gratis: categoría "Global Offers" (recursos y créditos de partners)
+- Anuncios del GO Team: categoría "Announcements" (revisar frecuentemente)
+- Para problemas de envío: categoría "Project Submission Help"
 
 ## Setup en portátil (hackathon)
 ```bash
