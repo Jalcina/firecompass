@@ -124,3 +124,24 @@ cp .env.example .env.local
 # Rellenar ANTHROPIC_API_KEY y BRAVE_SEARCH_API_KEY
 npm run dev
 ```
+
+## Estrategia de build — orden de prioridad
+
+**IMPORTANTE:** La mayoría de la app usa datos estáticos de `data/investigations.json`.
+La API de Anthropic solo es necesaria para las funciones de IA en tiempo real.
+
+### Fase 1 — Sin API key (construir primero)
+Todo esto usa datos de `investigations.json` y no llama a ninguna API:
+1. `app/page.tsx` — Home: frase del jurado, misión del proyecto, CTA al dashboard
+2. `app/simulator/page.tsx` — Comparador Tierra / ISS / Luna / Marte (datos hardcodeados en CLAUDE.md)
+3. `app/explorer/page.tsx` — Las 20 investigaciones NASA con DOIs, hallazgos, relevancia lunar
+4. `app/dashboard/page.tsx` — Vista general con métricas y acceso a las secciones
+
+### Fase 2 — Con API key (añadir después)
+Requiere `ANTHROPIC_API_KEY` en `.env.local`:
+5. `app/ask/page.tsx` — Chat: el usuario pregunta, Claude responde citando PSI IDs en tiempo real
+6. *(opcional)* Análisis de frames de vídeo con Claude Vision
+
+### Regla
+Construye la Fase 1 completa y despliega en Vercel antes de tocar la Fase 2.
+Una app funcional sin chat vale más que una app rota con chat.
